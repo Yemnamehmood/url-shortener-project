@@ -17,7 +17,7 @@ export default function Home() {
       const response = await fetch('https://api.short.io/links', {
         method: 'POST',
         headers: {
-          Authorization: 'sk_CdtRnWDvgLenyrzW', 
+          Authorization: process.env.NEXT_PUBLIC_API_KEY, 
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
